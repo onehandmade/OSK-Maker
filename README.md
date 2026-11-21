@@ -12,6 +12,8 @@ The keyboards it generates never take focus from the program you are typing into
 
 Created by Dani, who is handicapped and builds accessibility tools, mostly for games, where the game companies don't.
 
+> **⚠️ AI warning:** This program was written with the help of an AI assistant (Claude by Anthropic). AI-written code can contain mistakes, and it has not been tested on every Windows setup or every game and program. Use it at your own risk: try it first with something unimportant, keep backups of your layouts (`.osk` files), and be careful when using generated keyboards or scripts with online or competitive games, where automated input may be against the rules.
+
 ### Requirements
 
 - Windows
@@ -129,6 +131,8 @@ Tervezd meg a saját képernyő-billentyűzetedet (OSK), majd exportáld önáll
 A generált billentyűzetek soha nem veszik el a fókuszt attól a programtól, amelybe gépelsz, így a billentyűk közvetlenül a játékodba, rajzprogramodba vagy dokumentumodba érkeznek.
 
 Készítette Dani, aki mozgássérült, és akadálymentesítő eszközöket készít, főként játékokhoz, ott, ahol a játékgyártók nem teszik.
+
+> **⚠️ MI-figyelmeztetés:** Ezt a programot egy MI-asszisztens (az Anthropic Claude-ja) segítségével írták. Az MI által írt kód tartalmazhat hibákat, és nem tesztelték minden Windows-beállításon, sem minden játékkal vagy programmal. Saját felelősségedre használd: először próbáld ki valami lényegtelen dologgal, tarts biztonsági másolatot az elrendezéseidről (`.osk` fájlok), és légy óvatos a generált billentyűzetekkel és szkriptekkel online vagy versenyjátékokban, ahol az automatikus bevitel szabályellenes lehet.
 
 ### Követelmények
 
