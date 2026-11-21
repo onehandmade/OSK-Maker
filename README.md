@@ -59,6 +59,52 @@ The type names stay in English in both languages.
 - **Send** uses AutoHotkey Send syntax: `z`, `^c`, `{BackSpace}`, `{Esc}`, `^{NumpadAdd}`. The sticky Ctrl, Shift and Alt buttons (if enabled) are added in front of Send keys.
 - **Hold** is a press-and-hold toggle, for example `Space` or `Ctrl+Space`. Click once to hold, click again to release. Held keys are always released when the keyboard closes. Use `+` to combine keys, such as `Shift+Space`.
 
+#### Adding Backspace and Enter keys
+
+Backspace and Enter are not letters, so they must use the **Send** type (a **Text** key would only type the characters you see). In the editor:
+
+1. Set **Type** to `Send`.
+2. Type the symbol you want on the button into **Label**.
+3. Type the key name in braces into **Action**.
+4. Click **Add Key** (or **Update Selected** to change an existing key).
+
+| Key | Label (example) | Type | Action |
+|-----|-----------------|------|--------|
+| Backspace | `⌫` | Send | `{BackSpace}` |
+| Enter | `↵` | Send | `{Enter}` |
+| Delete | `⌦` | Send | `{Delete}` |
+| Tab | `⇥` | Send | `{Tab}` |
+| Escape | `Esc` | Send | `{Esc}` |
+| Space | `␣` | Send | `{Space}` |
+| Shift+Enter | `⇧↵` | Send | `+{Enter}` |
+
+Tips:
+
+- The braces `{ }` are required, and the key name is not case sensitive (`{backspace}` works too).
+- The label is only decoration. You can use any text or symbol, for example `Bksp` or `Enter` if a symbol does not display well in your font. See "How to enter a symbol" below.
+- To delete several characters in one click, repeat the key: `{BackSpace 5}`.
+- If the sticky Ctrl/Shift/Alt buttons are enabled, they are applied to these keys too.
+
+##### How to enter a symbol
+
+Windows has no simple key for symbols such as `⌫` or `↵`, so copy them and paste them into the **Label** field.
+
+**Copy and paste (easiest):** select a symbol here, copy it (**Ctrl+C**), and paste it into the Label field (**Ctrl+V**).
+
+`⌫` Backspace &nbsp; `↵` Enter &nbsp; `⌦` Delete &nbsp; `⇥` Tab &nbsp; `␣` Space &nbsp; `⇧` Shift
+
+**Windows Character Map (always works):**
+
+1. Press the Windows key, type `Character Map`, and open it.
+2. Tick **Advanced view** at the bottom.
+3. In the **Go to Unicode** box, type the code: `232B` for `⌫`, `21B5` for `↵`, `2326` for `⌦`, `21E5` for `⇥`, `2423` for `␣`, `21E7` for `⇧`.
+4. Click **Select**, then **Copy**.
+5. Click in the Label field in OSK Maker and paste with **Ctrl+V**.
+
+**Windows symbol panel:** press **Win + .** (the period key) and look in the symbols or arrows tab.
+
+Typing a symbol by voice (speech-to-text) usually does not work, so pasting is more reliable. If a symbol does not work for you, type plain text such as `Bksp` or `Enter` in the Label field. The label is only decoration; the **Action** field (`{BackSpace}`, `{Enter}`) is what makes the key work.
+
 #### Keyboard settings
 
 | Setting | Meaning |
@@ -178,6 +224,52 @@ A típusok nevei mindkét nyelven angolul maradnak.
 - **Text** pontosan úgy gépeli be a művelet szövegét, ahogy meg van adva. Jó szimbólumokhoz és szavakhoz, például `π`, `≤` vagy `hello`.
 - **Send** AutoHotkey Send szintaxist használ: `z`, `^c`, `{BackSpace}`, `{Esc}`, `^{NumpadAdd}`. A ragadó Ctrl, Shift és Alt gombok (ha engedélyezve vannak) a Send billentyűk elé kerülnek.
 - **Hold** nyomva tartó kapcsoló, például `Space` vagy `Ctrl+Space`. Egy kattintás lenyomva tartja, még egy kattintás felengedi. A tartott billentyűk a billentyűzet bezárásakor mindig felengedődnek. A billentyűket `+` jellel kombinálhatod, például `Shift+Space`.
+
+#### Backspace és Enter billentyű hozzáadása
+
+A Backspace és az Enter nem betűk, ezért a **Send** típust kell használniuk (a **Text** billentyű csak a látható karaktereket gépelné be). A szerkesztőben:
+
+1. Állítsd a **Típust** `Send`-re.
+2. A **Felirat** mezőbe írd be a gombra szánt szimbólumot.
+3. A **Művelet** mezőbe írd be a billentyű nevét kapcsos zárójelben.
+4. Kattints a **Billentyű hozzáadása** gombra (meglévő billentyű módosításához a **Kijelölt módosítása** gombra).
+
+| Billentyű | Felirat (példa) | Típus | Művelet |
+|-----------|-----------------|-------|---------|
+| Backspace | `⌫` | Send | `{BackSpace}` |
+| Enter | `↵` | Send | `{Enter}` |
+| Delete | `⌦` | Send | `{Delete}` |
+| Tab | `⇥` | Send | `{Tab}` |
+| Escape | `Esc` | Send | `{Esc}` |
+| Szóköz | `␣` | Send | `{Space}` |
+| Shift+Enter | `⇧↵` | Send | `+{Enter}` |
+
+Tippek:
+
+- A kapcsos zárójelek `{ }` kötelezőek, a billentyű neve pedig nem kis- és nagybetű érzékeny (a `{backspace}` is működik).
+- A felirat csak dekoráció. Bármilyen szöveget vagy szimbólumot használhatsz, például `Bksp` vagy `Enter` feliratot, ha a betűtípusodban egy szimbólum nem jelenik meg jól. Lásd lent: "Szimbólum beírása".
+- Több karakter törléséhez egy kattintással ismételd a billentyűt: `{BackSpace 5}`.
+- Ha a ragadó Ctrl/Shift/Alt gombok engedélyezve vannak, ezekre a billentyűkre is vonatkoznak.
+
+##### Szimbólum beírása
+
+A Windowsban nincs egyszerű billentyű az olyan szimbólumokhoz, mint a `⌫` vagy a `↵`, ezért másold ki őket, és illeszd be a **Felirat** mezőbe.
+
+**Másolás és beillesztés (a legegyszerűbb):** jelölj ki egy szimbólumot itt, másold ki (**Ctrl+C**), és illeszd be a Felirat mezőbe (**Ctrl+V**).
+
+`⌫` Backspace &nbsp; `↵` Enter &nbsp; `⌦` Delete &nbsp; `⇥` Tab &nbsp; `␣` Szóköz &nbsp; `⇧` Shift
+
+**Windows Karaktertábla (mindig működik):**
+
+1. Nyomd meg a Windows gombot, írd be: `Karaktertábla` (angol Windowsban `Character Map`), és nyisd meg.
+2. Jelöld be alul a **Speciális nézet** (Advanced view) négyzetet.
+3. A **Ugrás Unicode-ra** (Go to Unicode) mezőbe írd be a kódot: `232B` a `⌫`-hoz, `21B5` a `↵`-hoz, `2326` a `⌦`-hoz, `21E5` a `⇥`-hoz, `2423` a `␣`-hoz, `21E7` a `⇧`-hoz.
+4. Kattints a **Kijelölés** (Select), majd a **Másolás** (Copy) gombra.
+5. Kattints az OSK Maker Felirat mezőjébe, és illeszd be a **Ctrl+V**-vel.
+
+**Windows szimbólumpanel:** nyomd meg a **Win + .** (pont) billentyűkombinációt, és keresd a szimbólumok vagy nyilak fület.
+
+Szimbólum hangalapú beírása (beszédfelismeréssel) általában nem működik, ezért a beillesztés megbízhatóbb. Ha egy szimbólum nem működik, írj egyszerű szöveget a Felirat mezőbe, például `Bksp` vagy `Enter`. A felirat csak dekoráció; a **Művelet** mező (`{BackSpace}`, `{Enter}`) teszi működővé a billentyűt.
 
 #### Billentyűzet beállításai
 
